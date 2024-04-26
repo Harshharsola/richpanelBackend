@@ -12,6 +12,12 @@ export class Conversation {
   senderId: string;
 
   @Prop()
+  pageId: string;
+
+  @Prop()
+  fbComvoId: string;
+
+  @Prop()
   timeStamp: Date;
 }
 

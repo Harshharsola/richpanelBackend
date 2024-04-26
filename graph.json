@@ -1,0 +1,2024 @@
+{
+  "nodes": {
+    "52633725": {
+      "id": "52633725",
+      "label": "ApplicationConfig",
+      "parent": "-1854488872",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "MongooseModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
+    "52633726": {
+      "id": "52633726",
+      "label": "ApplicationConfig",
+      "parent": "-1854488871",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "MongooseModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
+    "52633727": {
+      "id": "52633727",
+      "label": "ApplicationConfig",
+      "parent": "-1854488870",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "MongooseModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
+    "52633728": {
+      "id": "52633728",
+      "label": "ApplicationConfig",
+      "parent": "-1854488869",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "MongooseModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
+    "92256891": {
+      "id": "92256891",
+      "label": "MessageModel",
+      "parent": "-1854488872",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "MongooseModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "MessageModel"
+      }
+    },
+    "92420881": {
+      "id": "92420881",
+      "label": "DatabaseConnection",
+      "parent": "-1350909915",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "MongooseCoreModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "DatabaseConnection"
+      }
+    },
+    "129925365": {
+      "id": "129925365",
+      "label": "ModuleRef",
+      "parent": "-1008182097",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "ConversationsModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
+      }
+    },
+    "179747553": {
+      "id": "179747553",
+      "label": "FacebookService",
+      "parent": "1426699299",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "PagesModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "FacebookService",
+        "initTime": 43.93180000000007
+      }
+    },
+    "203550704": {
+      "id": "203550704",
+      "label": "ExternalContextCreator",
+      "parent": "555176277",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "InternalCoreModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "ExternalContextCreator",
+        "initTime": 46.48980000000006
+      }
+    },
+    "211572259": {
+      "id": "211572259",
+      "label": "ConfigHostModule",
+      "metadata": {
+        "type": "module",
+        "global": true,
+        "dynamic": false,
+        "internal": false
+      }
+    },
+    "225063248": {
+      "id": "225063248",
+      "label": "InternalCoreModule",
+      "parent": "555176277",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "InternalCoreModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "InternalCoreModule",
+        "initTime": 48.88609999999994
+      }
+    },
+    "233936880": {
+      "id": "233936880",
+      "label": "AppController",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "controller",
+        "internal": false,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "AppController"
+      }
+    },
+    "253713642": {
+      "id": "253713642",
+      "label": "ApplicationConfig",
+      "parent": "-1008182097",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "ConversationsModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
+    "264711474": {
+      "id": "264711474",
+      "label": "MongooseModule",
+      "parent": "699745446",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "MongooseModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "MongooseModule",
+        "initTime": 44.69100000000003
+      }
+    },
+    "303302557": {
+      "id": "303302557",
+      "label": "ModuleRef",
+      "parent": "211572259",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "ConfigHostModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
+      }
+    },
+    "519735830": {
+      "id": "519735830",
+      "label": "ApplicationConfig",
+      "parent": "-493958991",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "ChatModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
+    "555176277": {
+      "id": "555176277",
+      "label": "InternalCoreModule",
+      "metadata": {
+        "type": "module",
+        "global": true,
+        "dynamic": true,
+        "internal": true
+      }
+    },
+    "570017133": {
+      "id": "570017133",
+      "label": "FacebookService",
+      "parent": "-1008182097",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "ConversationsModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "FacebookService",
+        "initTime": 44.303499999999985
+      }
+    },
+    "603011239": {
+      "id": "603011239",
+      "label": "UsersService",
+      "parent": "-2003726489",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "UsersModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "UsersService"
+      }
+    },
+    "671882984": {
+      "id": "671882984",
+      "label": "Reflector",
+      "parent": "555176277",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "InternalCoreModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "Reflector",
+        "initTime": 47.76559999999995
+      }
+    },
+    "699745446": {
+      "id": "699745446",
+      "label": "MongooseModule",
+      "metadata": {
+        "type": "module",
+        "global": false,
+        "dynamic": true,
+        "internal": false
+      }
+    },
+    "862756944": {
+      "id": "862756944",
+      "label": "ChatService",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "ChatService"
+      }
+    },
+    "902560543": {
+      "id": "902560543",
+      "label": "ModuleRef",
+      "parent": "-1350909915",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "MongooseCoreModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
+      }
+    },
+    "915774976": {
+      "id": "915774976",
+      "label": "ApplicationConfig",
+      "parent": "1712628187",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "ConfigModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
+    "930519593": {
+      "id": "930519593",
+      "label": "ConfigService",
+      "parent": "211572259",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "ConfigHostModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "Symbol(CONFIG_SERVICE)",
+        "initTime": 48.22349999999983
+      }
+    },
+    "981404832": {
+      "id": "981404832",
+      "label": "ModuleRef",
+      "parent": "699745446",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "MongooseModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
+      }
+    },
+    "984659044": {
+      "id": "984659044",
+      "label": "MongooseModule",
+      "parent": "-1854488872",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "MongooseModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "MongooseModule",
+        "initTime": 44.16090000000008
+      }
+    },
+    "984659045": {
+      "id": "984659045",
+      "label": "MongooseModule",
+      "parent": "-1854488871",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "MongooseModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "MongooseModule",
+        "initTime": 43.92280000000005
+      }
+    },
+    "984659046": {
+      "id": "984659046",
+      "label": "MongooseModule",
+      "parent": "-1854488870",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "MongooseModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "MongooseModule",
+        "initTime": 43.79230000000007
+      }
+    },
+    "984659047": {
+      "id": "984659047",
+      "label": "MongooseModule",
+      "parent": "-1854488869",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "MongooseModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "MongooseModule",
+        "initTime": 43.637300000000096
+      }
+    },
+    "1054488041": {
+      "id": "1054488041",
+      "label": "UserModel",
+      "parent": "-1854488872",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "MongooseModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "UserModel"
+      }
+    },
+    "1063746662": {
+      "id": "1063746662",
+      "label": "CONFIGURATION_TOKEN",
+      "parent": "211572259",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "ConfigHostModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "CONFIGURATION_TOKEN",
+        "initTime": 43.80179999999996
+      }
+    },
+    "1074192353": {
+      "id": "1074192353",
+      "label": "ChatService",
+      "parent": "-493958991",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "ChatModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "ChatService"
+      }
+    },
+    "1131051184": {
+      "id": "1131051184",
+      "label": "ChatGateway",
+      "parent": "-493958991",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "ChatModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "ChatGateway",
+        "initTime": 43.73890000000006
+      }
+    },
+    "1189153544": {
+      "id": "1189153544",
+      "label": "ChatModule",
+      "parent": "-493958991",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "ChatModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ChatModule",
+        "initTime": 43.743400000000065
+      }
+    },
+    "1426699299": {
+      "id": "1426699299",
+      "label": "PagesModule",
+      "metadata": {
+        "type": "module",
+        "global": false,
+        "dynamic": false,
+        "internal": false
+      }
+    },
+    "1434456218": {
+      "id": "1434456218",
+      "label": "Reflector",
+      "parent": "555176277",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "InternalCoreModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": true,
+        "token": "Reflector",
+        "initTime": 52.240200000000186
+      }
+    },
+    "1577338911": {
+      "id": "1577338911",
+      "label": "PagesService",
+      "parent": "1426699299",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "PagesModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "PagesService"
+      }
+    },
+    "1690574933": {
+      "id": "1690574933",
+      "label": "ModuleRef",
+      "parent": "1712628187",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "ConfigModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
+      }
+    },
+    "1712628187": {
+      "id": "1712628187",
+      "label": "ConfigModule",
+      "metadata": {
+        "type": "module",
+        "global": false,
+        "dynamic": true,
+        "internal": false
+      }
+    },
+    "1737837706": {
+      "id": "1737837706",
+      "label": "ApplicationConfig",
+      "parent": "-1350909915",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "MongooseCoreModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
+    "1769319388": {
+      "id": "1769319388",
+      "label": "ConfigModule",
+      "parent": "1712628187",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "ConfigModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ConfigModule",
+        "initTime": 43.92920000000004
+      }
+    },
+    "1771833552": {
+      "id": "1771833552",
+      "label": "PagesController",
+      "parent": "1426699299",
+      "metadata": {
+        "type": "controller",
+        "internal": false,
+        "sourceModuleName": "PagesModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "PagesController"
+      }
+    },
+    "1787828844": {
+      "id": "1787828844",
+      "label": "ConfigHostModule",
+      "parent": "211572259",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "ConfigHostModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ConfigHostModule",
+        "initTime": 43.806100000000015
+      }
+    },
+    "1919157847": {
+      "id": "1919157847",
+      "label": "REQUEST",
+      "parent": "555176277",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "InternalCoreModule",
+        "durable": false,
+        "static": false,
+        "scope": 2,
+        "transient": false,
+        "exported": true,
+        "token": "REQUEST",
+        "initTime": 45.35439999999994
+      }
+    },
+    "1952406399": {
+      "id": "1952406399",
+      "label": "ChatService",
+      "parent": "-1008182097",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "ConversationsModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "ChatService"
+      }
+    },
+    "1986699406": {
+      "id": "1986699406",
+      "label": "MongooseConnectionName",
+      "parent": "-1350909915",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "MongooseCoreModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "MongooseConnectionName"
+      }
+    },
+    "2111517089": {
+      "id": "2111517089",
+      "label": "ChatGateway",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "ChatGateway",
+        "initTime": 45.911800000000085
+      }
+    },
+    "2118694856": {
+      "id": "2118694856",
+      "label": "ApplicationConfig",
+      "parent": "211572259",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "ConfigHostModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
+    "-1486320561": {
+      "id": "-1486320561",
+      "label": "ModuleRef",
+      "parent": "555176277",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "InternalCoreModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
+      }
+    },
+    "-651043398": {
+      "id": "-651043398",
+      "label": "ApplicationConfig",
+      "parent": "555176277",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "InternalCoreModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
+    "-255469305": {
+      "id": "-255469305",
+      "label": "INQUIRER",
+      "parent": "555176277",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "InternalCoreModule",
+        "durable": false,
+        "static": true,
+        "scope": 1,
+        "transient": true,
+        "exported": true,
+        "token": "INQUIRER",
+        "initTime": 45.331500000000005
+      }
+    },
+    "-26938366": {
+      "id": "-26938366",
+      "label": "ModulesContainer",
+      "parent": "555176277",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "InternalCoreModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "ModulesContainer",
+        "initTime": 46.45770000000016
+      }
+    },
+    "-326832201": {
+      "id": "-326832201",
+      "label": "HttpAdapterHost",
+      "parent": "555176277",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "InternalCoreModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "HttpAdapterHost",
+        "initTime": 46.419200000000046
+      }
+    },
+    "-702581189": {
+      "id": "-702581189",
+      "label": "LazyModuleLoader",
+      "parent": "555176277",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "InternalCoreModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "LazyModuleLoader",
+        "initTime": 46.41610000000014
+      }
+    },
+    "-1904419534": {
+      "id": "-1904419534",
+      "label": "SerializedGraph",
+      "parent": "555176277",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "InternalCoreModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "SerializedGraph",
+        "initTime": 46.41010000000006
+      }
+    },
+    "-19112576": {
+      "id": "-19112576",
+      "label": "AppModule",
+      "metadata": {
+        "type": "module",
+        "global": false,
+        "dynamic": false,
+        "internal": false
+      }
+    },
+    "-2139588960": {
+      "id": "-2139588960",
+      "label": "AppModule",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "AppModule",
+        "initTime": 46.382499999999936
+      }
+    },
+    "-71302842": {
+      "id": "-71302842",
+      "label": "ModuleRef",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
+      }
+    },
+    "-2064622725": {
+      "id": "-2064622725",
+      "label": "ApplicationConfig",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
+    "-2130614055": {
+      "id": "-2130614055",
+      "label": "AppService",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "AppService",
+        "initTime": 46.33339999999998
+      }
+    },
+    "-856163394": {
+      "id": "-856163394",
+      "label": "FacebookService",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "FacebookService",
+        "initTime": 45.94479999999999
+      }
+    },
+    "-144110328": {
+      "id": "-144110328",
+      "label": "ConversationsService",
+      "parent": "-19112576",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "AppModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "ConversationsService"
+      }
+    },
+    "-2003726489": {
+      "id": "-2003726489",
+      "label": "UsersModule",
+      "metadata": {
+        "type": "module",
+        "global": false,
+        "dynamic": false,
+        "internal": false
+      }
+    },
+    "-495603840": {
+      "id": "-495603840",
+      "label": "UsersModule",
+      "parent": "-2003726489",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "UsersModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "UsersModule",
+        "initTime": 44.88650000000007
+      }
+    },
+    "-618964563": {
+      "id": "-618964563",
+      "label": "ModuleRef",
+      "parent": "-2003726489",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "UsersModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
+      }
+    },
+    "-643958110": {
+      "id": "-643958110",
+      "label": "ApplicationConfig",
+      "parent": "-2003726489",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "UsersModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
+    "-1102473136": {
+      "id": "-1102473136",
+      "label": "UsersController",
+      "parent": "-2003726489",
+      "metadata": {
+        "type": "controller",
+        "internal": false,
+        "sourceModuleName": "UsersModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "UsersController"
+      }
+    },
+    "-572011637": {
+      "id": "-572011637",
+      "label": "ApplicationConfig",
+      "parent": "699745446",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "MongooseModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
+    "-1996665865": {
+      "id": "-1996665865",
+      "label": "UserModel",
+      "parent": "699745446",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "MongooseModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "UserModel"
+      }
+    },
+    "-1008182097": {
+      "id": "-1008182097",
+      "label": "ConversationsModule",
+      "metadata": {
+        "type": "module",
+        "global": false,
+        "dynamic": false,
+        "internal": false
+      }
+    },
+    "-1745080704": {
+      "id": "-1745080704",
+      "label": "ConversationsModule",
+      "parent": "-1008182097",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "ConversationsModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ConversationsModule",
+        "initTime": 44.66229999999996
+      }
+    },
+    "-316325321": {
+      "id": "-316325321",
+      "label": "ConversationsService",
+      "parent": "-1008182097",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "ConversationsModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "ConversationsService"
+      }
+    },
+    "-1293337712": {
+      "id": "-1293337712",
+      "label": "ChatGateway",
+      "parent": "-1008182097",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "ConversationsModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "ChatGateway",
+        "initTime": 44.31140000000005
+      }
+    },
+    "-1490670768": {
+      "id": "-1490670768",
+      "label": "ConversationsController",
+      "parent": "-1008182097",
+      "metadata": {
+        "type": "controller",
+        "internal": false,
+        "sourceModuleName": "ConversationsModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "ConversationsController"
+      }
+    },
+    "-1854488872": {
+      "id": "-1854488872",
+      "label": "MongooseModule",
+      "metadata": {
+        "type": "module",
+        "global": false,
+        "dynamic": true,
+        "internal": false
+      }
+    },
+    "-1762758574": {
+      "id": "-1762758574",
+      "label": "ModuleRef",
+      "parent": "-1854488872",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "MongooseModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
+      }
+    },
+    "-157796685": {
+      "id": "-157796685",
+      "label": "PageModel",
+      "parent": "-1854488872",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "MongooseModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "PageModel"
+      }
+    },
+    "-1993563648": {
+      "id": "-1993563648",
+      "label": "PagesModule",
+      "parent": "1426699299",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "PagesModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "PagesModule",
+        "initTime": 44.149799999999914
+      }
+    },
+    "-1483506071": {
+      "id": "-1483506071",
+      "label": "ModuleRef",
+      "parent": "1426699299",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "PagesModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
+      }
+    },
+    "-1508499618": {
+      "id": "-1508499618",
+      "label": "ApplicationConfig",
+      "parent": "1426699299",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "PagesModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
+    "-1854488871": {
+      "id": "-1854488871",
+      "label": "MongooseModule",
+      "metadata": {
+        "type": "module",
+        "global": false,
+        "dynamic": true,
+        "internal": false
+      }
+    },
+    "-1762758573": {
+      "id": "-1762758573",
+      "label": "ModuleRef",
+      "parent": "-1854488871",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "MongooseModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
+      }
+    },
+    "-1318755931": {
+      "id": "-1318755931",
+      "label": "PageModel",
+      "parent": "-1854488871",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "MongooseModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "PageModel"
+      }
+    },
+    "-503631789": {
+      "id": "-503631789",
+      "label": "ConfigService",
+      "parent": "1712628187",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "ConfigModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "ConfigService"
+      }
+    },
+    "-1854488870": {
+      "id": "-1854488870",
+      "label": "MongooseModule",
+      "metadata": {
+        "type": "module",
+        "global": false,
+        "dynamic": true,
+        "internal": false
+      }
+    },
+    "-1762758572": {
+      "id": "-1762758572",
+      "label": "ModuleRef",
+      "parent": "-1854488870",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "MongooseModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
+      }
+    },
+    "-1350909915": {
+      "id": "-1350909915",
+      "label": "MongooseCoreModule",
+      "metadata": {
+        "type": "module",
+        "global": true,
+        "dynamic": true,
+        "internal": false
+      }
+    },
+    "-941557008": {
+      "id": "-941557008",
+      "label": "MongooseCoreModule",
+      "parent": "-1350909915",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "MongooseCoreModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "MongooseCoreModule",
+        "initTime": 45.83909999999992
+      }
+    },
+    "-493958991": {
+      "id": "-493958991",
+      "label": "ChatModule",
+      "metadata": {
+        "type": "module",
+        "global": false,
+        "dynamic": false,
+        "internal": false
+      }
+    },
+    "-2111857237": {
+      "id": "-2111857237",
+      "label": "ModuleRef",
+      "parent": "-493958991",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "ChatModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
+      }
+    },
+    "-672730573": {
+      "id": "-672730573",
+      "label": "FacebookService",
+      "parent": "-493958991",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "ChatModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "FacebookService",
+        "initTime": 43.650899999999865
+      }
+    },
+    "-1854488869": {
+      "id": "-1854488869",
+      "label": "MongooseModule",
+      "metadata": {
+        "type": "module",
+        "global": false,
+        "dynamic": true,
+        "internal": false
+      }
+    },
+    "-1762758571": {
+      "id": "-1762758571",
+      "label": "ModuleRef",
+      "parent": "-1854488869",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "MongooseModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
+      }
+    },
+    "-1535437971": {
+      "id": "-1535437971",
+      "label": "MessageModel",
+      "parent": "-1854488869",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "MongooseModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "MessageModel"
+      }
+    },
+    "-1318755930": {
+      "id": "-1318755930",
+      "label": "PageModel",
+      "parent": "-1854488869",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "MongooseModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "PageModel"
+      }
+    }
+  },
+  "edges": {
+    "189694679": {
+      "source": "1434456218",
+      "target": "671882984",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "InternalCoreModule",
+        "sourceClassName": "Reflector",
+        "targetClassName": "Reflector",
+        "sourceClassToken": "Reflector",
+        "targetClassToken": "Reflector",
+        "targetModuleName": "InternalCoreModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor",
+        "internal": true
+      },
+      "id": "189694679"
+    },
+    "201353817": {
+      "source": "-19112576",
+      "target": "-1854488870",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "AppModule",
+        "targetModuleName": "MongooseModule"
+      },
+      "id": "201353817"
+    },
+    "220934302": {
+      "source": "-493958991",
+      "target": "211572259",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ChatModule",
+        "targetModuleName": "ConfigHostModule"
+      },
+      "id": "220934302"
+    },
+    "277348389": {
+      "source": "1426699299",
+      "target": "211572259",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "PagesModule",
+        "targetModuleName": "ConfigHostModule"
+      },
+      "id": "277348389"
+    },
+    "330046600": {
+      "source": "699745446",
+      "target": "-1350909915",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MongooseModule",
+        "targetModuleName": "MongooseCoreModule"
+      },
+      "id": "330046600"
+    },
+    "353437685": {
+      "source": "-1008182097",
+      "target": "211572259",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ConversationsModule",
+        "targetModuleName": "ConfigHostModule"
+      },
+      "id": "353437685"
+    },
+    "353572985": {
+      "source": "1712628187",
+      "target": "211572259",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ConfigModule",
+        "targetModuleName": "ConfigHostModule"
+      },
+      "id": "353572985"
+    },
+    "456853847": {
+      "source": "699745446",
+      "target": "211572259",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MongooseModule",
+        "targetModuleName": "ConfigHostModule"
+      },
+      "id": "456853847"
+    },
+    "469401997": {
+      "source": "-493958991",
+      "target": "555176277",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ChatModule",
+        "targetModuleName": "InternalCoreModule"
+      },
+      "id": "469401997"
+    },
+    "584653416": {
+      "source": "1712628187",
+      "target": "555176277",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ConfigModule",
+        "targetModuleName": "InternalCoreModule"
+      },
+      "id": "584653416"
+    },
+    "608766232": {
+      "source": "-1350909915",
+      "target": "555176277",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MongooseCoreModule",
+        "targetModuleName": "InternalCoreModule"
+      },
+      "id": "608766232"
+    },
+    "640423218": {
+      "source": "1426699299",
+      "target": "555176277",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "PagesModule",
+        "targetModuleName": "InternalCoreModule"
+      },
+      "id": "640423218"
+    },
+    "750211886": {
+      "source": "-1854488869",
+      "target": "-1350909915",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MongooseModule",
+        "targetModuleName": "MongooseCoreModule"
+      },
+      "id": "750211886"
+    },
+    "805244905": {
+      "source": "-1350909915",
+      "target": "211572259",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MongooseCoreModule",
+        "targetModuleName": "ConfigHostModule"
+      },
+      "id": "805244905"
+    },
+    "877543340": {
+      "source": "-1854488869",
+      "target": "555176277",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MongooseModule",
+        "targetModuleName": "InternalCoreModule"
+      },
+      "id": "877543340"
+    },
+    "897941956": {
+      "source": "-1854488872",
+      "target": "555176277",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MongooseModule",
+        "targetModuleName": "InternalCoreModule"
+      },
+      "id": "897941956"
+    },
+    "981066640": {
+      "source": "1426699299",
+      "target": "-1350909915",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "PagesModule",
+        "targetModuleName": "MongooseCoreModule"
+      },
+      "id": "981066640"
+    },
+    "987755577": {
+      "source": "-2003726489",
+      "target": "555176277",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "UsersModule",
+        "targetModuleName": "InternalCoreModule"
+      },
+      "id": "987755577"
+    },
+    "1048965135": {
+      "source": "-19112576",
+      "target": "1426699299",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "AppModule",
+        "targetModuleName": "PagesModule"
+      },
+      "id": "1048965135"
+    },
+    "1053182735": {
+      "source": "-493958991",
+      "target": "-1350909915",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ChatModule",
+        "targetModuleName": "MongooseCoreModule"
+      },
+      "id": "1053182735"
+    },
+    "1056428433": {
+      "source": "-19112576",
+      "target": "555176277",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "AppModule",
+        "targetModuleName": "InternalCoreModule"
+      },
+      "id": "1056428433"
+    },
+    "1066869913": {
+      "source": "-493958991",
+      "target": "-1854488869",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ChatModule",
+        "targetModuleName": "MongooseModule"
+      },
+      "id": "1066869913"
+    },
+    "1078393346": {
+      "source": "-1008182097",
+      "target": "555176277",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ConversationsModule",
+        "targetModuleName": "InternalCoreModule"
+      },
+      "id": "1078393346"
+    },
+    "1207819375": {
+      "source": "-19112576",
+      "target": "-1350909915",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "AppModule",
+        "targetModuleName": "MongooseCoreModule"
+      },
+      "id": "1207819375"
+    },
+    "1497086506": {
+      "source": "1712628187",
+      "target": "-1350909915",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ConfigModule",
+        "targetModuleName": "MongooseCoreModule"
+      },
+      "id": "1497086506"
+    },
+    "1664660320": {
+      "source": "-1008182097",
+      "target": "-1350909915",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ConversationsModule",
+        "targetModuleName": "MongooseCoreModule"
+      },
+      "id": "1664660320"
+    },
+    "1791876867": {
+      "source": "-1854488871",
+      "target": "555176277",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MongooseModule",
+        "targetModuleName": "InternalCoreModule"
+      },
+      "id": "1791876867"
+    },
+    "1820551820": {
+      "source": "-1008182097",
+      "target": "-1854488872",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ConversationsModule",
+        "targetModuleName": "MongooseModule"
+      },
+      "id": "1820551820"
+    },
+    "2129970765": {
+      "source": "-941557008",
+      "target": "1986699406",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "MongooseCoreModule",
+        "sourceClassName": "MongooseCoreModule",
+        "targetClassName": "MongooseConnectionName",
+        "sourceClassToken": "MongooseCoreModule",
+        "targetClassToken": "MongooseConnectionName",
+        "targetModuleName": "MongooseCoreModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "2129970765"
+    },
+    "-1088946238": {
+      "source": "-941557008",
+      "target": "902560543",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "MongooseCoreModule",
+        "sourceClassName": "MongooseCoreModule",
+        "targetClassName": "ModuleRef",
+        "sourceClassToken": "MongooseCoreModule",
+        "targetClassToken": "ModuleRef",
+        "targetModuleName": "MongooseCoreModule",
+        "keyOrIndex": 1,
+        "injectionType": "constructor",
+        "internal": true
+      },
+      "id": "-1088946238"
+    },
+    "-158970266": {
+      "source": "-19112576",
+      "target": "-2003726489",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "AppModule",
+        "targetModuleName": "UsersModule"
+      },
+      "id": "-158970266"
+    },
+    "-1494194961": {
+      "source": "-19112576",
+      "target": "-1008182097",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "AppModule",
+        "targetModuleName": "ConversationsModule"
+      },
+      "id": "-1494194961"
+    },
+    "-844262897": {
+      "source": "-19112576",
+      "target": "1712628187",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "AppModule",
+        "targetModuleName": "ConfigModule"
+      },
+      "id": "-844262897"
+    },
+    "-192150092": {
+      "source": "-19112576",
+      "target": "-493958991",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "AppModule",
+        "targetModuleName": "ChatModule"
+      },
+      "id": "-192150092"
+    },
+    "-815553404": {
+      "source": "-19112576",
+      "target": "211572259",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "AppModule",
+        "targetModuleName": "ConfigHostModule"
+      },
+      "id": "-815553404"
+    },
+    "-770015739": {
+      "source": "-2003726489",
+      "target": "699745446",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "UsersModule",
+        "targetModuleName": "MongooseModule"
+      },
+      "id": "-770015739"
+    },
+    "-991562516": {
+      "source": "-2003726489",
+      "target": "211572259",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "UsersModule",
+        "targetModuleName": "ConfigHostModule"
+      },
+      "id": "-991562516"
+    },
+    "-1896236073": {
+      "source": "-2003726489",
+      "target": "-1350909915",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "UsersModule",
+        "targetModuleName": "MongooseCoreModule"
+      },
+      "id": "-1896236073"
+    },
+    "-2001102970": {
+      "source": "699745446",
+      "target": "555176277",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MongooseModule",
+        "targetModuleName": "InternalCoreModule"
+      },
+      "id": "-2001102970"
+    },
+    "-103257323": {
+      "source": "-1854488872",
+      "target": "211572259",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MongooseModule",
+        "targetModuleName": "ConfigHostModule"
+      },
+      "id": "-103257323"
+    },
+    "-1121554618": {
+      "source": "-1854488872",
+      "target": "-1350909915",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MongooseModule",
+        "targetModuleName": "MongooseCoreModule"
+      },
+      "id": "-1121554618"
+    },
+    "-264654469": {
+      "source": "1426699299",
+      "target": "-1854488871",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "PagesModule",
+        "targetModuleName": "MongooseModule"
+      },
+      "id": "-264654469"
+    },
+    "-1559755906": {
+      "source": "1426699299",
+      "target": "699745446",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "PagesModule",
+        "targetModuleName": "MongooseModule"
+      },
+      "id": "-1559755906"
+    },
+    "-138081260": {
+      "source": "-1854488871",
+      "target": "211572259",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MongooseModule",
+        "targetModuleName": "ConfigHostModule"
+      },
+      "id": "-138081260"
+    },
+    "-1043564347": {
+      "source": "-1854488871",
+      "target": "-1350909915",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MongooseModule",
+        "targetModuleName": "MongooseCoreModule"
+      },
+      "id": "-1043564347"
+    },
+    "-1995183955": {
+      "source": "211572259",
+      "target": "555176277",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ConfigHostModule",
+        "targetModuleName": "InternalCoreModule"
+      },
+      "id": "-1995183955"
+    },
+    "-718282705": {
+      "source": "211572259",
+      "target": "-1350909915",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ConfigHostModule",
+        "targetModuleName": "MongooseCoreModule"
+      },
+      "id": "-718282705"
+    },
+    "-965574076": {
+      "source": "-1854488870",
+      "target": "-1350909915",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MongooseModule",
+        "targetModuleName": "MongooseCoreModule"
+      },
+      "id": "-965574076"
+    },
+    "-1609155518": {
+      "source": "-1854488870",
+      "target": "555176277",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MongooseModule",
+        "targetModuleName": "InternalCoreModule"
+      },
+      "id": "-1609155518"
+    },
+    "-172905197": {
+      "source": "-1854488870",
+      "target": "211572259",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MongooseModule",
+        "targetModuleName": "ConfigHostModule"
+      },
+      "id": "-172905197"
+    },
+    "-939031811": {
+      "source": "-1854488869",
+      "target": "211572259",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MongooseModule",
+        "targetModuleName": "ConfigHostModule"
+      },
+      "id": "-939031811"
+    },
+    "-951393523": {
+      "source": "930519593",
+      "target": "1063746662",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "ConfigHostModule",
+        "sourceClassName": "ConfigService",
+        "targetClassName": "CONFIGURATION_TOKEN",
+        "sourceClassToken": "Symbol(CONFIG_SERVICE)",
+        "targetClassToken": "CONFIGURATION_TOKEN",
+        "targetModuleName": "ConfigHostModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "-951393523"
+    }
+  },
+  "entrypoints": {},
+  "extras": {
+    "orphanedEnhancers": [],
+    "attachedEnhancers": []
+  },
+  "status": "partial",
+  "metadata": {
+    "cause": {
+      "type": "unknown-dependencies",
+      "context": {
+        "index": 0,
+        "dependencies": [
+          "ConversationModel",
+          "MessageModel",
+          "UserModel",
+          "PageModel"
+        ],
+        "name": "ConversationModel"
+      },
+      "moduleId": "-1008182097",
+      "nodeId": "-316325321"
+    }
+  }
+}

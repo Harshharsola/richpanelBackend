@@ -4,14 +4,21 @@ import { Model } from 'mongoose';
 import { User } from 'src/schemas/users.schema';
 import { CreateUserDto } from './dtos/createUser.dto';
 import { UserSignInDto } from './dtos/userSignIn.dto';
+import { UpdateIdAndToken } from './dtos/updateIdandToken.dto';
 
 @Injectable()
 export class UsersService {
   constructor(@InjectModel(User.name) private userModel: Model<User>) {}
 
   async create(createUserDto: CreateUserDto) {
-    const createdUser = new this.userModel(createUserDto);
-    return createdUser.save();
+    try {
+      const createdUser = new this.userModel(createUserDto);
+      await createdUser.save();
+      return createdUser._id;
+    } catch (error) {
+      console.log(error);
+      return error;
+    }
   }
 
   async signIn(userSignInDto: UserSignInDto) {
@@ -26,6 +33,21 @@ export class UsersService {
       return 'success';
     } else {
       return 'wrong password';
+    }
+  }
+
+  async updateUserProfile(payload: UpdateIdAndToken) {
+    try {
+      console.log(payload);
+      const user = await this.userModel.findOneAndUpdate(
+        { _id: payload.userId },
+        { userFbId: payload.userFbId, accessToken: payload.accessToken },
+      );
+      console.log(user);
+      return 'Successfully updated';
+    } catch (err) {
+      console.log(err);
+      return {};
     }
   }
 }

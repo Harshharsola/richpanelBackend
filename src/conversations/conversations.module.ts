@@ -7,15 +7,23 @@ import {
   ConversationsSchema,
 } from 'src/schemas/conversations.schema';
 import { Message, MessageScema } from 'src/schemas/messages.schema';
+import { User, UsersSchema } from 'src/schemas/users.schema';
+import { ChatGateway } from 'src/chat/chat.gateway';
+import { Page, PagesSchema } from 'src/schemas/pages.schema';
+import { FacebookService } from 'src/facebook/facebook.service';
+import { ChatService } from 'src/chat/chat.service';
 
 @Module({
   imports: [
     MongooseModule.forFeature([
-      { name: Conversation.name, schema: ConversationsSchema },
+      // { name: Conversation.name, schema: ConversationsSchema },
       { name: Message.name, schema: MessageScema },
+      { name: User.name, schema: UsersSchema },
+      { name: Page.name, schema: PagesSchema },
     ]),
   ],
-  providers: [ConversationsService],
+
+  providers: [ConversationsService, ChatGateway, FacebookService, ChatService],
   controllers: [ConversationsController],
 })
 export class ConversationsModule {}

@@ -1,8 +1,12 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
+import { ChatGateway } from 'src/chat/chat.gateway';
+import { FacebookService } from 'src/facebook/facebook.service';
 import { Conversation } from 'src/schemas/conversations.schema';
 import { Message } from 'src/schemas/messages.schema';
+import { Page, PagesDocument } from 'src/schemas/pages.schema';
+import { User } from 'src/schemas/users.schema';
 
 @Injectable()
 export class ConversationsService {
@@ -10,6 +14,9 @@ export class ConversationsService {
     @InjectModel(Conversation.name)
     private conversationModel: Model<Conversation>,
     @InjectModel(Message.name) private msgModel: Model<Message>,
+    @InjectModel(User.name) private userModel: Model<User>,
+    @InjectModel(Page.name) private pageModel: Model<Page>,
+    // private chatGateway: ChatGateway,
   ) {}
 
   async connectPageToWebhook(res: any) {
@@ -35,7 +42,7 @@ export class ConversationsService {
     res.status(200).send(response);
   }
 
-  fetchAccessToken = async () => {
+  async fetchAccessToken() {
     const url = new URL('https://graph.facebook.com/oauth/access_token');
 
     // Adding parameters to the URL
@@ -53,7 +60,7 @@ export class ConversationsService {
     } catch (error) {
       console.error('Error fetching access token:', error);
     }
-  };
+  }
 
   async addMessageToDb(msgObjectFromFb) {
     try {
@@ -73,6 +80,7 @@ export class ConversationsService {
         const newConversation = new this.conversationModel({
           userId: msgObjectFromFb.messaging[0].recipient.id,
           senderId: msgObjectFromFb.messaging[0].sender.id,
+          pageId: msgObjectFromFb.id,
           timeStamp: currentTime,
         });
         conversationId = (await newConversation.save())._id;
@@ -86,6 +94,7 @@ export class ConversationsService {
         const newConversation = new this.conversationModel({
           userId: msgObjectFromFb.messaging[0].recipient.id,
           senderId: msgObjectFromFb.messaging[0].sender.id,
+          pageId: msgObjectFromFb.id,
           timeStamp: currentTime,
         });
         conversationId = (await newConversation.save())._id;
@@ -103,5 +112,35 @@ export class ConversationsService {
       console.error('Failed to add message to DB:', error);
       throw error; // Rethrow or handle as needed
     }
+  }
+  async sendMsgToUser(msgObjectFromFb: any) {
+    console.log(msgObjectFromFb.messaging[0].recipient.id);
+    const page = await this.pageModel.findOne({
+      fbPageId: msgObjectFromFb.messaging[0].recipient.id,
+    });
+    const user = await this.userModel.findById(page.userId);
+    const msgObject = {
+      senderId: msgObjectFromFb.messaging[0].sender.id,
+      messageContent: msgObjectFromFb.messaging[0].message.text,
+    };
+    // this.chatGateway.notifyUser(user._id.toString(), msgObject);
+    return 'success';
+  }
+
+  async getConversation(body: any) {
+    let response;
+    if (body.conversationId) {
+      response = await this.msgModel.find(
+        { conversationId: body.conversationId },
+        { sort: { timeStamp: -1 } },
+      );
+      return response;
+    } else if (body.userId) {
+      let user: User = await this.userModel.findOne({ _id: body.userId });
+      response = await this.conversationModel.find({ userId: user.userFbId });
+      return response;
+    }
+    response = 'missing params';
+    return response;
   }
 }

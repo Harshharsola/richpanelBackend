@@ -8,6 +8,11 @@ import { ConfigModule } from '@nestjs/config';
 import { PagesController } from './pages/pages.controller';
 import { PagesService } from './pages/pages.service';
 import { PagesModule } from './pages/pages.module';
+import { FacebookService } from './facebook/facebook.service';
+import { ChatGateway } from './chat/chat.gateway';
+import { ConversationsService } from './conversations/conversations.service';
+import { ChatService } from './chat/chat.service';
+import { ChatModule } from './chat/chat.module';
 
 @Module({
   imports: [
@@ -16,8 +21,9 @@ import { PagesModule } from './pages/pages.module';
     PagesModule,
     ConfigModule.forRoot(),
     MongooseModule.forRoot(process.env.MONGO_DB_URL),
+    ChatModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, FacebookService, ChatGateway, ConversationsService, ChatService],
 })
 export class AppModule {}

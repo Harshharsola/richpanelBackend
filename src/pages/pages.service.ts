@@ -1,15 +1,39 @@
 import { Injectable } from '@nestjs/common';
 import { AddPageDto } from './dtos/addPage.dto';
 import { InjectModel } from '@nestjs/mongoose';
-import { Page } from 'src/schemas/pages.schema';
+import { Page, PagesDocument } from 'src/schemas/pages.schema';
 import { Model } from 'mongoose';
+import { User, UsersDocument } from 'src/schemas/users.schema';
+import { FacebookService } from 'src/facebook/facebook.service';
 
 @Injectable()
 export class PagesService {
-  constructor(@InjectModel(Page.name) private pageModel: Model<Page>) {}
+  constructor(
+    @InjectModel(Page.name) private pageModel: Model<Page>,
+    @InjectModel(User.name) private userModel: Model<Page>,
+    private facebookService: FacebookService,
+  ) {}
   async add(addPageDto: AddPageDto) {
     const createdPage = new this.pageModel(addPageDto);
     return createdPage.save();
+  }
+
+  async get(userId: string) {
+    console.log(userId);
+    const user: UsersDocument = await this.userModel.findById(userId);
+    const pageArray = await this.facebookService.getPagesForUser(
+      user.accessToken,
+    );
+    const pageDocumentArray: PagesDocument[] = pageArray.map((page) => {
+      return new this.pageModel({
+        userId: user._id,
+        fbPageId: page.pageId,
+        pageAccessToken: page.pageAccessToken,
+        pageName: page.pageName,
+      });
+    });
+    await this.pageModel.insertMany(pageDocumentArray);
+    return { pageArray };
   }
 }
 
