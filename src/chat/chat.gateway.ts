@@ -17,7 +17,7 @@ import { ChatService } from './chat.service';
 export class ChatGateway
   implements OnGatewayInit, OnGatewayConnection, OnGatewayDisconnect
 {
-  // constructor(private chatService: ChatService) {}
+  constructor(private chatService: ChatService) {}
   private readonly logger = new Logger(ChatGateway.name);
   private users = new Map<string, string>();
   @WebSocketServer() io: Server;

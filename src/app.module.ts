@@ -16,14 +16,20 @@ import { ChatModule } from './chat/chat.module';
 
 @Module({
   imports: [
-    UsersModule,
     ConversationsModule,
+    UsersModule,
     PagesModule,
+    ChatModule,
     ConfigModule.forRoot(),
     MongooseModule.forRoot(process.env.MONGO_DB_URL),
-    ChatModule,
   ],
   controllers: [AppController],
-  providers: [AppService, FacebookService, ChatGateway, ConversationsService, ChatService],
+  providers: [
+    AppService,
+    FacebookService,
+    // ChatGateway,
+    // ConversationsService,
+    // ChatService,
+  ],
 })
 export class AppModule {}

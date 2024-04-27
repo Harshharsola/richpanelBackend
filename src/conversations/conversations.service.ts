@@ -11,12 +11,12 @@ import { User } from 'src/schemas/users.schema';
 @Injectable()
 export class ConversationsService {
   constructor(
-    @InjectModel(Conversation.name)
-    private conversationModel: Model<Conversation>,
+    private chatGateway: ChatGateway,
     @InjectModel(Message.name) private msgModel: Model<Message>,
     @InjectModel(User.name) private userModel: Model<User>,
     @InjectModel(Page.name) private pageModel: Model<Page>,
-    // private chatGateway: ChatGateway,
+    @InjectModel(Conversation.name)
+    private conversationModel: Model<Conversation>,
   ) {}
 
   async connectPageToWebhook(res: any) {
@@ -123,7 +123,7 @@ export class ConversationsService {
       senderId: msgObjectFromFb.messaging[0].sender.id,
       messageContent: msgObjectFromFb.messaging[0].message.text,
     };
-    // this.chatGateway.notifyUser(user._id.toString(), msgObject);
+    this.chatGateway.notifyUser(user._id.toString(), msgObject);
     return 'success';
   }
 

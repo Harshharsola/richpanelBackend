@@ -14,6 +14,7 @@ import { FacebookService } from 'src/facebook/facebook.service';
       { name: Page.name, schema: PagesSchema },
     ]),
   ],
-  providers: [ChatGateway, ChatService, FacebookService],
+  // exports: [ChatService],
+  providers: [ChatService, FacebookService],
 })
 export class ChatModule {}
