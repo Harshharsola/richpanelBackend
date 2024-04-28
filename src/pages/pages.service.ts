@@ -33,7 +33,7 @@ export class PagesService {
       });
     });
     await this.pageModel.insertMany(pageDocumentArray);
-    return { pageArray };
+    return { pageArray: pageDocumentArray };
   }
 }
 

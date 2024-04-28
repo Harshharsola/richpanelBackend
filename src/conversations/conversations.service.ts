@@ -17,29 +17,34 @@ export class ConversationsService {
     @InjectModel(Page.name) private pageModel: Model<Page>,
     @InjectModel(Conversation.name)
     private conversationModel: Model<Conversation>,
+    private facebookService: FacebookService,
   ) {}
 
   async connectPageToWebhook(res: any) {
     const data = await this.fetchAccessToken();
-    const response = await fetch(
-      `https://graph.facebook.com/${process.env.APP_ID}/subscriptions`,
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
+    try {
+      const response = await fetch(
+        `https://graph.facebook.com/${process.env.APP_ID}/subscriptions`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: new URLSearchParams({
+            object: 'page',
+            callback_url:
+              'https://42d9-2405-201-4018-a2b9-99da-e35-f284-7d0f.ngrok-free.app/conversations/messaging-webhook',
+            fields: 'messages',
+            verify_token: 'verification',
+            access_token: data.access_token,
+          }),
         },
-        body: new URLSearchParams({
-          object: 'page',
-          callback_url:
-            'https://42d9-2405-201-4018-a2b9-99da-e35-f284-7d0f.ngrok-free.app/conversations/messaging-webhook',
-          fields: 'messages',
-          verify_token: 'verification',
-          access_token: data.access_token,
-        }),
-      },
-    );
-    console.log(response);
-    res.status(200).send(response);
+      );
+      console.log(response);
+      res.status(200).send(response);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   async fetchAccessToken() {
@@ -78,9 +83,9 @@ export class ConversationsService {
         conversation[0].timeStamp.getTime() < oneDayAgo
       ) {
         const newConversation = new this.conversationModel({
-          userId: msgObjectFromFb.messaging[0].recipient.id,
+          userId: msgObjectFromFb.id,
           senderId: msgObjectFromFb.messaging[0].sender.id,
-          pageId: msgObjectFromFb.id,
+
           timeStamp: currentTime,
         });
         conversationId = (await newConversation.save())._id;
@@ -92,9 +97,8 @@ export class ConversationsService {
         conversationId = conversation[0]._id;
       } else {
         const newConversation = new this.conversationModel({
-          userId: msgObjectFromFb.messaging[0].recipient.id,
+          userId: msgObjectFromFb.id,
           senderId: msgObjectFromFb.messaging[0].sender.id,
-          pageId: msgObjectFromFb.id,
           timeStamp: currentTime,
         });
         conversationId = (await newConversation.save())._id;
@@ -114,33 +118,61 @@ export class ConversationsService {
     }
   }
   async sendMsgToUser(msgObjectFromFb: any) {
-    console.log(msgObjectFromFb.messaging[0].recipient.id);
-    const page = await this.pageModel.findOne({
-      fbPageId: msgObjectFromFb.messaging[0].recipient.id,
-    });
-    const user = await this.userModel.findById(page.userId);
-    const msgObject = {
-      senderId: msgObjectFromFb.messaging[0].sender.id,
-      messageContent: msgObjectFromFb.messaging[0].message.text,
-    };
-    this.chatGateway.notifyUser(user._id.toString(), msgObject);
-    return 'success';
+    console.log(msgObjectFromFb.id);
+    try {
+      const page = await this.pageModel.findOne({
+        fbPageId: msgObjectFromFb.id,
+      });
+      const user = await this.userModel.findById(page.userId);
+      const msgObject = {
+        senderId: msgObjectFromFb.messaging[0].sender.id,
+        messageContent: msgObjectFromFb.messaging[0].message.text,
+      };
+      this.chatGateway.notifyUser(user._id.toString(), msgObject);
+      return 'success';
+    } catch (error) {
+      console.log(error);
+    }
+    return 'fail';
   }
 
-  async getConversation(body: any) {
+  async getConversation(pageId: string) {
+    const page = await this.pageModel.findById(pageId);
     let response;
-    if (body.conversationId) {
-      response = await this.msgModel.find(
-        { conversationId: body.conversationId },
-        { sort: { timeStamp: -1 } },
+    try {
+      response = await this.facebookService.getConversations(
+        page.fbPageId,
+        page.pageAccessToken,
       );
-      return response;
-    } else if (body.userId) {
-      let user: User = await this.userModel.findOne({ _id: body.userId });
-      response = await this.conversationModel.find({ userId: user.userFbId });
-      return response;
+
+      response.data.forEach((conversation) => {
+        const createdConversation = new this.conversationModel({
+          userId: page.fbPageId,
+
+          senderId: conversation.participants.data[0].id,
+
+          fbConvoId: conversation.id,
+          timeStamp: Date.now(),
+        });
+        createdConversation.save();
+      });
+    } catch (error) {
+      console.log(error);
     }
-    response = 'missing params';
-    return response;
+
+    return { data: response.data };
+    // if (body.conversationId) {
+    //   response = await this.msgModel.find(
+    //     { conversationId: body.conversationId },
+    //     { sort: { timeStamp: -1 } },
+    //   );
+    //   return response;
+    // } else if (body.userId) {
+    //   let user: User = await this.userModel.findOne({ _id: body.userId });
+    //   response = await this.conversationModel.find({ userId: user.userFbId });
+    //   return response;
+    // }
+    // response = 'missing params';
+    // return response;
   }
 }

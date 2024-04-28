@@ -52,4 +52,19 @@ export class FacebookService {
       })
       .catch((error) => console.error('Error:', error));
   }
+
+  async getConversations(pageId, pageAccessToken) {
+    console.log(pageId, pageAccessToken);
+    const url = `https://graph.facebook.com/v19.0/${pageId}/conversations?fields=participants&access_token=${pageAccessToken}`;
+    try {
+      const response = await (await fetch(url)).json();
+      return response;
+    } catch (error) {
+      console.log(error);
+    }
+    return 'failed to fetch';
+  }
 }
+
+// curl -i -X GET \
+//  "https://graph.facebook.com/v19.0/285300134669173/conversations?fields=participants&access_token=EABprvJULjNYBOz9uIvdN0ZBddwbkLQ9geytAty16Vt37H1JncUdAZBEOyiY9z6JdoViBfKyloepqtKbbm5PtWqZAUEsSk2d5PeAtZC1OODg4ZCUlifW2ZBRZCFFDRCm6xFOXNKh22LL8FzePsLrBxXUJaFqZA3FZAcGAXsn0P7YJpJsnE6CE3WphbpwOYJMG90ZBT5cZCmljnZAKDBictBX4nMsktpK2"

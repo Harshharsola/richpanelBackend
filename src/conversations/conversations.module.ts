@@ -17,7 +17,6 @@ import { ChatService } from 'src/chat/chat.service';
 
 @Module({
   imports: [
-    ChatModule,
     MongooseModule.forFeature([
       { name: Conversation.name, schema: ConversationsSchema },
       { name: Message.name, schema: MessageScema },

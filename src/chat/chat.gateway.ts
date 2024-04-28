@@ -49,7 +49,7 @@ export class ChatGateway
   ) {
     this.logger.log(`Message received from client id: ${client.id}`);
     this.logger.debug(`Payload: ${data}`);
-    // this.chatService.sendMsgToRecipient(data);
+    this.chatService.sendMsgToRecipient(data);
     //add msg to data base and send msg to facebook
   }
 

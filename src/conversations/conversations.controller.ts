@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post, Req, Res } from '@nestjs/common';
+import { Body, Controller, Get, Post, Query, Req, Res } from '@nestjs/common';
 import { ConversationsService } from './conversations.service';
 import { ChatGateway } from 'src/chat/chat.gateway';
 
@@ -34,7 +34,7 @@ export class ConversationsController {
       const msgSent = await this.conversationsService.sendMsgToUser(
         body.entry[0],
       );
-      console.log(body.entry[0]);
+      // console.log(body.entry[0]);
       res.status(200).send(response);
     } else {
       res.sendStatus(404);
@@ -49,8 +49,9 @@ export class ConversationsController {
   }
 
   @Get()
-  async getConversation(@Body() body, @Res() res) {
-    const response = await this.conversationsService.getConversation(body);
+  async getConversation(@Query('pageId') pageId, @Res() res) {
+    console.log('page id ', pageId);
+    const response = await this.conversationsService.getConversation(pageId);
     res.status(200).send(response);
   }
 }
