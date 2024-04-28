@@ -9,6 +9,12 @@ export class Page {
   userId: string;
 
   @Prop({ required: true })
+  fbPageId: string;
+
+  @Prop()
+  pageName: string;
+
+  @Prop()
   pageAccessToken: string;
 }
 

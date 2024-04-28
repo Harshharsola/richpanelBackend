@@ -1,4 +1,4 @@
 export interface UserSignInDto {
-  userName: string;
+  email: string;
   password: string;
 }

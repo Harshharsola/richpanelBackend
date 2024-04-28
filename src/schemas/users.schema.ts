@@ -16,8 +16,9 @@ export class User {
 
   @Prop()
   accessToken: string;
-  
+
+  @Prop()
+  userFbId: string;
 }
 
 export const UsersSchema = SchemaFactory.createForClass(User);
-
