@@ -9,9 +9,8 @@ export class UsersController {
   constructor(private userService: UsersService) {}
   @Post('signup')
   async createUser(@Body() createUserDto: CreateUserDto, @Res() res) {
-    console.log('hi');
     const response = await this.userService.create(createUserDto);
-    res.send({ id: response });
+    res.send(response);
     return;
   }
 
@@ -22,7 +21,6 @@ export class UsersController {
 
   @Post('add-id')
   async updateUserId(@Body() updateIdandToken: UpdateIdAndToken, @Res() res) {
-    console.log('add-id called');
     const response = await this.userService.updateUserProfile(updateIdandToken);
     res.send(response);
     return;

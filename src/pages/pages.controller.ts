@@ -1,6 +1,7 @@
 import {
   Body,
   Controller,
+  Delete,
   Get,
   Param,
   Post,
@@ -23,7 +24,13 @@ export class PagesController {
   @Get()
   async getPages(@Query('id') id: string, @Res() res) {
     const response = await this.pagesService.get(id);
-    res.send({ data: response });
+    res.send(response);
     return;
+  }
+
+  @Delete('delete')
+  async deletePage(@Query('id') id: string, @Res() res) {
+    const response = await this.pagesService.delete(id);
+    res.send(response);
   }
 }

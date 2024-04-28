@@ -1,10 +1,11 @@
-import { Injectable } from '@nestjs/common';
+import { HttpCode, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { User } from 'src/schemas/users.schema';
 import { CreateUserDto } from './dtos/createUser.dto';
 import { UserSignInDto } from './dtos/userSignIn.dto';
 import { UpdateIdAndToken } from './dtos/updateIdandToken.dto';
+import { getApiResponse } from 'src/utils';
 
 @Injectable()
 export class UsersService {
@@ -12,27 +13,40 @@ export class UsersService {
 
   async create(createUserDto: CreateUserDto) {
     try {
+      const user = await this.userModel.findOne({ email: createUserDto.email });
+      console.log(user);
+      if (user !== null) {
+        return getApiResponse({}, '409', 'email already in use');
+      }
       const createdUser = new this.userModel(createUserDto);
       await createdUser.save();
-      return createdUser._id;
+      return getApiResponse(
+        { _id: createdUser._id },
+        '201',
+        'successfully created user',
+      );
     } catch (error) {
       console.log(error);
-      return error;
+      return getApiResponse({}, '500', 'internal server error');
     }
   }
 
   async signIn(userSignInDto: UserSignInDto) {
     const user = await this.userModel.findOne({
-      userName: userSignInDto.userName,
+      email: userSignInDto.email,
     });
     console.log(user);
     if (user === null) {
-      return 'wrong username';
+      return getApiResponse({}, '400', 'wrong email');
     }
     if (user.password === userSignInDto.password) {
-      return 'success';
+      return getApiResponse(
+        { _id: user._id, userName: user.userName, email: user.email },
+        '200',
+        'login successfull',
+      );
     } else {
-      return 'wrong password';
+      return getApiResponse({}, '400', 'wrong password');
     }
   }
 
@@ -43,11 +57,14 @@ export class UsersService {
         { _id: payload.userId },
         { userFbId: payload.userFbId, accessToken: payload.accessToken },
       );
+      if (user === null) {
+        return getApiResponse({}, '400', 'user does not exist');
+      }
       console.log(user);
-      return 'Successfully updated';
+      return getApiResponse({}, '200', 'access token added succesfully');
     } catch (err) {
       console.log(err);
-      return {};
+      return getApiResponse({}, '500', 'internal server error');
     }
   }
 }

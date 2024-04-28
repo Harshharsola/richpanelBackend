@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import { getApiResponse } from 'src/utils';
 
 @Injectable()
 export class FacebookService {
@@ -11,7 +12,9 @@ export class FacebookService {
           userAccessToken,
       )
     ).json();
-
+    if (response.error) {
+      return getApiResponse({}, '400', response.error.message);
+    }
     const pageArray = response.data.map((element: any) => {
       return {
         pageName: element.name,
