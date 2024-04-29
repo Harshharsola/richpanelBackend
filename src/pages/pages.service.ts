@@ -38,7 +38,7 @@ export class PagesService {
 
       await Promise.all(
         pageArray.map((page) => {
-          this.pageModel.updateOne(
+          return this.pageModel.updateOne(
             { userId: user._id, fbPageId: page.pageId },
             {
               $set: {
@@ -50,6 +50,7 @@ export class PagesService {
           );
         }),
       );
+
       const pageDocumentArray = await this.pageModel.find({
         userId: user._id,
         fbPageId: { $in: pageArray.map((page) => page.pageId) },
