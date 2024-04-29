@@ -21,7 +21,7 @@ async function bootstrap() {
   //   console.log('a user connected');
   // });
   app.enableCors({
-    origin: '*', // Allow your front-end domain
+    origin: 'http://localhost:3001', // Allow your front-end domain
     methods: 'GET, POST, PUT, DELETE, OPTIONS', // Allowed methods
     allowedHeaders: 'Content-Type', // Allowed headers
   });
