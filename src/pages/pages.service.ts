@@ -47,8 +47,11 @@ export class PagesService {
       const newPages = pageDocumentArray.map((pageDocument) => {
         return {
           updateOne: {
-            filter: { fbPageId: pageDocument.fbPageId },
-            update: pageDocument,
+            filter: {
+              fbPageId: pageDocument.fbPageId,
+              userId: pageDocument.userId,
+            },
+            update: { pageAccessToken: pageDocument.pageAccessToken },
             upsert: true,
           },
         };
