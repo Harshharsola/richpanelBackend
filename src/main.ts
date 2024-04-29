@@ -23,7 +23,7 @@ async function bootstrap() {
   app.enableCors({
     origin: '*', // Allow your front-end domain
     methods: 'GET, POST, PUT, DELETE, OPTIONS', // Allowed methods
-    // allowedHeaders: 'Content-Type', // Allowed headers
+    allowedHeaders: 'Content-Type', // Allowed headers
   });
   await app.listen(process.env.PORT || 3000);
 }
