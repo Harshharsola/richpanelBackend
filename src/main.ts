@@ -5,10 +5,6 @@ import { ResponseInterceptor } from './response/response.interceptor';
 import { Server } from 'socket.io';
 const http = require('http');
 async function bootstrap() {
-  const httpsOptions = {
-    key: fs.readFileSync('./src/cert/key.pem'),
-    cert: fs.readFileSync('./src/cert/cert.pem'),
-  };
   const app = await NestFactory.create(AppModule, {
     snapshot: true,
     abortOnError: false,
@@ -25,13 +21,14 @@ async function bootstrap() {
   //   console.log('a user connected');
   // });
   app.enableCors({
-    origin: '*', // Allow your front-end domain
+    origin: 'http://localhost:3001', // Allow your front-end domain
     methods: 'GET, POST, PUT, DELETE, OPTIONS', // Allowed methods
-    // allowedHeaders: 'Content-Type', // Allowed headers
+    allowedHeaders: 'Content-Type', // Allowed headers
   });
-  await app.listen(3000);
+  await app.listen(process.env.PORT || 3000);
 }
 bootstrap().catch((err) => {
+  console.error(err);
   fs.writeFileSync('graph.json', PartialGraphHost.toString() ?? '');
   process.exit(1);
 });
