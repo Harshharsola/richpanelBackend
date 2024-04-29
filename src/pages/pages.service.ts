@@ -36,27 +36,25 @@ export class PagesService {
         return getApiResponse({}, '200', 'no pages found for the user');
       }
 
-      const pageDocumentArray: PagesDocument[] = pageArray.map((page) => {
-        return new this.pageModel({
-          userId: user._id,
-          fbPageId: page.pageId,
-          pageAccessToken: page.pageAccessToken,
-          pageName: page.pageName,
-        });
-      });
-      const newPages = pageDocumentArray.map((pageDocument) => {
-        return {
-          updateOne: {
-            filter: {
-              fbPageId: pageDocument.fbPageId,
-              userId: pageDocument.userId,
+      await Promise.all(
+        pageArray.map((page) => {
+          this.pageModel.updateOne(
+            { userId: user._id, fbPageId: page.pageId },
+            {
+              $set: {
+                pageAccessToken: page.pageAccessToken,
+                pageName: page.pageName,
+              },
             },
-            update: { pageAccessToken: pageDocument.pageAccessToken },
-            upsert: true,
-          },
-        };
+            { upsert: true },
+          );
+        }),
+      );
+      const pageDocumentArray = await this.pageModel.find({
+        userId: user._id,
+        fbPageId: { $in: pageArray.map((page) => page.pageId) },
       });
-      const res = await this.pageModel.bulkWrite(newPages);
+
       return getApiResponse({ pageArray: pageDocumentArray }, '200', 'success');
     } catch (error) {
       console.log(error);
